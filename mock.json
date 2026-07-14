@@ -1,3 +1,82 @@
 {
-    "id": "1"
+  "movies_mock": [
+    {
+      "id": 1,
+      "title": "Bestest Movie",
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "release_year": 1999
+    },
+    {
+      "id": 2,
+      "title": "Sequel No-one Asked For",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "release_year": 2001
+    },
+    {
+      "id": 3,
+      "title": "What If",
+      "genres": [
+        "Action"
+      ],
+      "release_year": 2010
+    },
+    {
+      "id": 4,
+      "title": "Funny Movie",
+      "genres": [
+        "Comedy",
+        "Horror"
+      ],
+      "release_year": 2004
+    },
+    {
+      "id": 5,
+      "title": "Cult Classic",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "release_year": 2000
+    },
+    {
+      "id": 6,
+      "title": "Old Movie",
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "release_year": 1993
+    },
+    {
+      "id": 7,
+      "title": "Really Old Movie",
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "release_year": 1950
+    },
+    {
+      "id": 8,
+      "title": "Serious Biopic",
+      "genres": [
+        "Biopic"
+      ],
+      "release_year": 1999
+    },
+    {
+      "id": 9,
+      "title": "Musical",
+      "genres": [
+        "Musical"
+      ],
+      "release_year": 1999
+    }
+  ]
 }

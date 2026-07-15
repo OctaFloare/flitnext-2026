@@ -1,5 +1,6 @@
 import Image from "next/image"
 import {movies_mock} from "../../mock.json"
+import Link from "next/link"
 
 const MoviePage = () => {
     return <div>
@@ -14,12 +15,14 @@ const MoviePage = () => {
                     </>
                     <>
                         <p>Genres: {movie.genres.join(", ")}</p>
+                        <Link href={`/movies/${movie.id}`}>
                         <Image 
                             src={movie.imgUrl} 
                             alt={`${movie.title}-image`}
                             width={200}
                             height={200}
-                        />
+                            
+                        /></Link>
                     </>
                 </div>
             ))}

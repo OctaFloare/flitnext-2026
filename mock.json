@@ -8,7 +8,7 @@
         "Action"
       ],
       "release_year": 1999,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
       "imgUrl": "https://picsum.photos/seed/bestestmovie/400/600"
     },
     {
@@ -19,7 +19,6 @@
         "Drama"
       ],
       "release_year": 2001,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       "imgUrl": "https://picsum.photos/seed/sequelnooneaskedfor/400/600"
     },
     {
@@ -29,7 +28,8 @@
         "Action"
       ],
       "release_year": 2010,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/whatif/400/600"
     },
     {
@@ -40,7 +40,8 @@
         "Horror"
       ],
       "release_year": 2004,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/funnymovie/400/600"
     },
     {
@@ -51,7 +52,8 @@
         "Drama"
       ],
       "release_year": 2000,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+            "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/cultclassic/400/600"
     },
     {
@@ -62,7 +64,8 @@
         "Action"
       ],
       "release_year": 1993,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+            "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/oldmovie/400/600"
     },
     {
@@ -73,7 +76,8 @@
         "Action"
       ],
       "release_year": 1950,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/reallyoldmovie/400/600"
     },
     {
@@ -83,7 +87,8 @@
         "Biopic"
       ],
       "release_year": 1999,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/seriousbiopic/400/600"
     },
     {
@@ -93,7 +98,8 @@
         "Musical"
       ],
       "release_year": 1999,
-      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
+
       "imgUrl": "https://picsum.photos/seed/musical/400/600"
     }
   ]

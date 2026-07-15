@@ -1,9 +1,22 @@
 import Link from 'next/link'
 
+const CustomLink = 
+    ({ href, text }: {
+        href: string,
+        text: string
+    }) => {
+
+    return <Link href={href}>
+        <p className='text-lg text-black'>{text}</p>
+    </Link>
+}
+
 export const Navbar = () => {
 
-    return <div className='flex gap-5 mb-5'>
-        <Link href="/">Home</Link>
-        <Link href="/movies">Movies</Link>
+    return <div className='bg-amber-400 w-full p-2'>
+        <div className='flex justify-center gap-5'>
+            <CustomLink href="/" text={"Home"} />
+            <CustomLink href="/movies" text="Movies"/>
+        </div>
     </div>
 }

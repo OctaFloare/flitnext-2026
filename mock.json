@@ -7,7 +7,9 @@
         "Comedy",
         "Action"
       ],
-      "release_year": 1999
+      "release_year": 1999,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "imgUrl": "https://picsum.photos/seed/bestestmovie/400/600"
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
         "Action",
         "Drama"
       ],
-      "release_year": 2001
+      "release_year": 2001,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "imgUrl": "https://picsum.photos/seed/sequelnooneaskedfor/400/600"
     },
     {
       "id": 3,
@@ -24,7 +28,9 @@
       "genres": [
         "Action"
       ],
-      "release_year": 2010
+      "release_year": 2010,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "imgUrl": "https://picsum.photos/seed/whatif/400/600"
     },
     {
       "id": 4,
@@ -33,7 +39,9 @@
         "Comedy",
         "Horror"
       ],
-      "release_year": 2004
+      "release_year": 2004,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "imgUrl": "https://picsum.photos/seed/funnymovie/400/600"
     },
     {
       "id": 5,
@@ -42,7 +50,9 @@
         "Thriller",
         "Drama"
       ],
-      "release_year": 2000
+      "release_year": 2000,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "imgUrl": "https://picsum.photos/seed/cultclassic/400/600"
     },
     {
       "id": 6,
@@ -51,7 +61,9 @@
         "Comedy",
         "Action"
       ],
-      "release_year": 1993
+      "release_year": 1993,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      "imgUrl": "https://picsum.photos/seed/oldmovie/400/600"
     },
     {
       "id": 7,
@@ -60,7 +72,9 @@
         "Comedy",
         "Action"
       ],
-      "release_year": 1950
+      "release_year": 1950,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+      "imgUrl": "https://picsum.photos/seed/reallyoldmovie/400/600"
     },
     {
       "id": 8,
@@ -68,7 +82,9 @@
       "genres": [
         "Biopic"
       ],
-      "release_year": 1999
+      "release_year": 1999,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "imgUrl": "https://picsum.photos/seed/seriousbiopic/400/600"
     },
     {
       "id": 9,
@@ -76,7 +92,9 @@
       "genres": [
         "Musical"
       ],
-      "release_year": 1999
+      "release_year": 1999,
+      "sourceUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "imgUrl": "https://picsum.photos/seed/musical/400/600"
     }
   ]
 }

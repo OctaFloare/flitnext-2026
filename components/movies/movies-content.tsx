@@ -1,17 +1,19 @@
 'use client'
 
 import Image from "next/image"
-import {movies_mock} from "../../mock.json"
 import Link from "next/link"
 import { useQuery } from "@tanstack/react-query"
+import * as data from '../../mock.json'
+
+type Movies = typeof data
 
 export const MoviesContent = () => {
-    const { data, loading, error } = useQuery({
+    const { data, loading, error } = useQuery<Movies>({
         queryKey: ['movies'],
         queryFn: async () => {
             const data = await fetch('/api/movies', { method: 'GET'})
 
-            return data
+            return data.json()
         }
     })
 
@@ -22,7 +24,7 @@ export const MoviesContent = () => {
             Movie Catalog
         </h1>
         <div className="grid grid-cols-3 gap-5">
-            {movies_mock.map((movie) => (
+            {data && JSON.parse(data).map((movie) => (!movie.deleted &&
                 <div className="flex p-5 border-2 border-amber-300 items-center justify-center flex-col" key={movie.id}>
                     <>
                         <p className="text-lg m-2">{movie.title}</p><p className="text-gray-300 font-bold">({movie.release_year})</p>

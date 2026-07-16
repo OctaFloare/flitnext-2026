@@ -11,7 +11,8 @@ type Movie = {
 }
 
 export const GET = async (request: Request) => {
-   return new Response(JSON.stringify(data.movies_mock), {
+
+   return new Response(JSON.stringify(data), {
     status: 200,
     headers: { 'Content-Type': 'application/json' }
   });

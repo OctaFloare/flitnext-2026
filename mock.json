@@ -19,6 +19,7 @@
         "Drama"
       ],
       "release_year": 2001,
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
       "imgUrl": "https://picsum.photos/seed/sequelnooneaskedfor/400/600"
     },
     {
@@ -29,7 +30,6 @@
       ],
       "release_year": 2010,
       "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
-
       "imgUrl": "https://picsum.photos/seed/whatif/400/600"
     },
     {
@@ -52,8 +52,7 @@
         "Drama"
       ],
       "release_year": 2000,
-            "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
-
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
       "imgUrl": "https://picsum.photos/seed/cultclassic/400/600"
     },
     {
@@ -64,8 +63,7 @@
         "Action"
       ],
       "release_year": 1993,
-            "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
-
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
       "imgUrl": "https://picsum.photos/seed/oldmovie/400/600"
     },
     {
@@ -76,8 +74,7 @@
         "Action"
       ],
       "release_year": 1950,
-            "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
-
+      "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
       "imgUrl": "https://picsum.photos/seed/reallyoldmovie/400/600"
     },
     {
@@ -90,6 +87,8 @@
       "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
 
       "imgUrl": "https://picsum.photos/seed/seriousbiopic/400/600"
+      ,
+      "deleted": "false"
     },
     {
       "id": 9,

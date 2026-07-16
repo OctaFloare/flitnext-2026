@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import * as data from "../../../mock.json"
+import movies from "../../../mock.json"
 
 type Movie = {
     id: number;
@@ -12,7 +12,7 @@ type Movie = {
 
 export const GET = async (request: Request) => {
 
-   return new Response(JSON.stringify(data), {
+   return new Response(JSON.stringify(movies), {
     status: 200,
     headers: { 'Content-Type': 'application/json' }
   });

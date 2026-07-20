@@ -1,6 +1,6 @@
 import { BrokenPage as BrokenPageComponent } from "@/components/broken-page"
 
-export const BrokenPage = () => {
+export default function BrokenPage() {
 
-    return <BrokenPageComponent /> 
+   return <BrokenPageComponent title="Broken Page" />
 }

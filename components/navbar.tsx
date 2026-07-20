@@ -17,7 +17,8 @@ export const Navbar = () => {
         <div className='flex justify-center gap-5'>
             <CustomLink href="/" text={"Home"} />
             <CustomLink href="/movies" text="Movies"/>
-            <CustomLink href="/ broken-link" text="Broken Link" />
+            <CustomLink href="/broken-link" text="Broken Link" />
+            <CustomLink href="/broken-page" text="Broken Page" />
         </div>
     </div>
 }

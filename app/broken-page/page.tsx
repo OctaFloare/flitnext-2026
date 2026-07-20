@@ -1,6 +1,7 @@
-import { BrokenPage as BrokenPageComponent } from "@/components/broken-page"
+import { BrokenPageComponent as BrokenPage } from "@/components/broken-page"
 
-export const BrokenPage = () => {
-
-    return <BrokenPageComponent /> 
+const BrokenLinkPage = () => {
+    return <BrokenPage title="This is the broken page" /> 
 }
+
+export default BrokenLinkPage

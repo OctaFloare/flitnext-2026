@@ -7,7 +7,7 @@ on:
       - 'test/*'
 
 jobs:
-  lint.run:
+  lint-run:
     name: lint-run
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
       - name: Run lint
         run: npm run lint | yarn lint
 
-  test.run:
+  test-run:
     name: test-run
     runs-on: ubuntu-latest
     steps:

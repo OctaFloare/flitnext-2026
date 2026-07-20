@@ -25,7 +25,7 @@ export const MoviesContent = () => {
         </h1>
         <div className="grid grid-cols-3 gap-5">
             {data && data.map((movie) => (!movie.deleted &&
-                <div className="flex p-5 border-2 border-amber-300 items-center justify-center flex-col" key={movie.id}>
+                <div data-testid="movie-card" className="flex p-5 border-2 border-amber-300 items-center justify-center flex-col" key={movie.id}>
                     <>
                         <p className="text-lg m-2">{movie.title}</p><p className="text-gray-300 font-bold">({movie.release_year})</p>
                     </>

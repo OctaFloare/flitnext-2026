@@ -2,5 +2,7 @@ import { BrokenPage as BrokenPageComponent } from "@/components/broken-page"
 
 export const BrokenPage = () => {
 
-    return <BrokenPageComponent /> 
+    return <BrokenPageComponent title={"broken page"} /> 
 }
+
+export default BrokenPage

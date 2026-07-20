@@ -7,3 +7,12 @@ test('has title', async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Flitnext/);
 });
+
+test('go to movies page', async ({ page }) => {
+  await page.goto('http://localhost:3000/');
+
+  await page.getByRole('link', {"name": "Movies"}).click();
+
+  await expect(page).toHaveURL('http://localhost:3000/movies');
+});
+

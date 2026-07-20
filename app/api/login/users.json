@@ -1,0 +1,10 @@
+[
+    {
+        "login": "admin",
+        "password": "admin"
+    },
+    {
+        "login": "developer",
+        "password": "12345678"
+    }
+]

@@ -9,7 +9,7 @@ type Movie = typeof moviesData[0]
 export const MovieContent = ({ movieId } : {
     movieId: number,
 }) => {
-    const { data, loading, error } = useQuery<Movie>({
+    const { data, error } = useQuery<Movie>({
         queryKey: ['movie', `${movieId}`],
         queryFn: async () => {
             const result = await fetch(`/api/movie/${movieId}`, {
@@ -20,7 +20,7 @@ export const MovieContent = ({ movieId } : {
         }
     })
 
-    const { mutate, data: deleteData, isLoading } = useDeleteMovie({ movieId })
+    const { mutate, data: deleteData } = useDeleteMovie({ movieId })
 
     const onDeleteClick = () => {
         mutate()

@@ -9,6 +9,7 @@ module.exports = {
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  output: "export"
 };
 
 export default nextConfig;

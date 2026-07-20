@@ -8,7 +8,7 @@ import * as data from '../../mock.json'
 type Movies = typeof data
 
 export const MoviesContent = () => {
-    const { data, loading, error } = useQuery<Movies>({
+    const { data, error } = useQuery<Movies>({
         queryKey: ['movies'],
         queryFn: async () => {
             const data = await fetch('/api/movies', { method: 'GET'})

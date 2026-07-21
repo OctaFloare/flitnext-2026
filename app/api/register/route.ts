@@ -4,6 +4,7 @@ import {NextRequest, NextResponse} from "next/server";
 
 type Creds = {
     username: string,
+    username: string,
     password: string
 }
 
@@ -13,17 +14,20 @@ export const POST = async (
 
     const data: Creds = await request.json();
 
-    const {username, password} = data;
+    const { username, password } = data;
 
     const file = JSON.parse(await fs.promises.readFile("app/api/login/users.json", 'utf8'));
     const {users} = file;
 
-    const user = users.find((u: { login: string; }) => u.login === username);
+    console.log("file: " + file)
+
+    const user = users.find((u: { username: string; }) => u.username === username);
     if (user) {
         return Response.json({error: 'User already exists'}, {status: 401});
     }
 
     const newUser: Creds = {
+        username: username,
         username: username,
         password: password
     }

@@ -2,11 +2,11 @@
     "users":
         [
             {
-                "login": "admin",
+                "username": "admin",
                 "password": "admin"
             },
             {
-                "login": "developer",
+                "username": "developer",
                 "password": "12345678"
             }
         ]

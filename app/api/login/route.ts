@@ -5,7 +5,6 @@ import { createHash } from 'crypto';
 
 type Creds = {
     username: string,
-    username: string,
     password: string
 }
 
@@ -15,7 +14,6 @@ export const POST = async (
 
     const data: Creds = await request.json();
 
-    const {username, password} = data;
     const {username, password} = data;
 
     const file = await fs.promises.readFile("app/api/login/users.json", 'utf8');

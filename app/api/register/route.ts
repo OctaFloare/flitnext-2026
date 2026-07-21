@@ -5,7 +5,6 @@ import {NextRequest, NextResponse} from "next/server";
 
 type Creds = {
     username: string,
-    username: string,
     password: string
 }
 

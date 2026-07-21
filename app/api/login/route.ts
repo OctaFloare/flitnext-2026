@@ -29,7 +29,7 @@ export const POST = async (
     }
 
     const token = jwt.sign(
-        {login: username, password, exp: Date.now() + 3600 * 60 * 1000}, "secret123"
+        {login: username, password, exp: (Date.now() / 1000) + 3600}, "secret123"
     );
 
     const response = NextResponse.json({success: true});

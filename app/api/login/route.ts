@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import {NextRequest, NextResponse} from "next/server";
 
 type Creds = {
-    login: string,
+    username: string,
     password: string
 }
 
@@ -13,12 +13,12 @@ export const POST = async (
 
     const data: Creds = await request.json();
 
-    const {login, password} = data;
+    const {username, password} = data;
 
     const file = await fs.promises.readFile("app/api/login/users.json", 'utf8');
     const {users} = JSON.parse(file);
 
-    const user = users.find((u: { login: string; }) => u.login === login);
+    const user = users.find((u: { login: string; }) => u.login === username);
     if (!user) {
         return Response.json({error: 'User does not exist'}, {status: 401});
     }
@@ -29,7 +29,7 @@ export const POST = async (
     }
 
     const token = jwt.sign(
-        {login, password, exp: Date.now() + 3600 * 60 * 1000}, "secret123"
+        {login: username, password, exp: Date.now() + 3600 * 60 * 1000}, "secret123"
     );
 
     const response = NextResponse.json({success: true});

@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { NextRequest, NextResponse } from "next/server";
 
 type Creds = {
-    login: string,
+    username: string,
     password: string
 }
 
@@ -13,20 +13,20 @@ export const POST = async (
 
     const data: Creds = await request.json();
 
-    const { login, password } = data;
+    const { username, password } = data;
 
     const file = JSON.parse(await fs.promises.readFile("app/api/login/users.json", 'utf8'));
     const { users } = file;
 
     console.log("file: " + file)
 
-    const user = users.find((u: { login: string; }) => u.login === login);
+    const user = users.find((u: { login: string; }) => u.login === username);
     if (user) {
         return Response.json({ error: 'User already exists' }, { status: 401 });
     }
 
     const newUser: Creds = {
-        login: login,
+        username: username,
         password: password
     }
 

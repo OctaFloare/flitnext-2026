@@ -32,7 +32,6 @@ export async function middleware(req: NextRequest, res: NextResponse) {
     const isProtected = protectedRoutes.some(route => pathname.startsWith(route));
     // validation
     if (isProtected) {
-        console.log('Auth Middleware Hit');
         if (!authToken || tokenExpired) {
             return NextResponse.redirect(new URL('/login', req.url));
         }

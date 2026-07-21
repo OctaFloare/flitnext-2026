@@ -1,6 +1,6 @@
 import fs from 'fs'
 import jwt from 'jsonwebtoken';
-import { NextRequest, NextResponse } from "next/server";
+import {NextRequest, NextResponse} from "next/server";
 
 type Creds = {
     username: string,
@@ -13,16 +13,14 @@ export const POST = async (
 
     const data: Creds = await request.json();
 
-    const { username, password } = data;
+    const {username, password} = data;
 
     const file = JSON.parse(await fs.promises.readFile("app/api/login/users.json", 'utf8'));
-    const { users } = file;
-
-    console.log("file: " + file)
+    const {users} = file;
 
     const user = users.find((u: { login: string; }) => u.login === username);
     if (user) {
-        return Response.json({ error: 'User already exists' }, { status: 401 });
+        return Response.json({error: 'User already exists'}, {status: 401});
     }
 
     const newUser: Creds = {
@@ -34,11 +32,9 @@ export const POST = async (
         users: [...users, newUser]
     }
 
-    console.log("Appended users: " + JSON.stringify(appendedUsers))
-
     await fs.promises.writeFile("app/api/login/users.json", JSON.stringify(appendedUsers), 'utf8')
 
-    const response = NextResponse.json({ success: true });
+    const response = NextResponse.json({success: true});
 
     return response;
 }

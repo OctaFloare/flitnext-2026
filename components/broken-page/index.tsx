@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect, useState } from "react"
 
 export const BrokenPageComponent = ({ title }: {title: string}) => {
@@ -8,14 +9,15 @@ export const BrokenPageComponent = ({ title }: {title: string}) => {
     const [forEffect, setForEffect] = useState(0);
     const [shouldShow, setShouldShow] = useState(true);
 
+    
+    useEffect(() => {
+        setForEffect(prev => prev + 1)
+        console.log("i only do this once")
+    }, [])
+
     if(!shouldShow){
         return <div>Dobby is free!</div>
     }
-
-    useEffect(() => {
-        setForEffect(1)
-        console.log("i only do this once")
-    }, [forEffect])
 
     return condition && <div>
         {title.toUpperCase()}

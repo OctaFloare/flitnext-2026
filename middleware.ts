@@ -20,7 +20,7 @@ export async function middleware(req: NextRequest, res: NextResponse) {
 
     const authToken = req.cookies.get('authToken')?.value
     const pathname = req.nextUrl.pathname;
-    let tokenExpired = null;
+    const tokenExpired = authToken ? isTokenExpired(authToken) : null;
     if (authToken) {
         tokenExpired = isTokenExpired(authToken);
     }

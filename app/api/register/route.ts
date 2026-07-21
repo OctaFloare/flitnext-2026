@@ -1,3 +1,4 @@
+import { createHash } from 'crypto';
 import fs from 'fs'
 import jwt from 'jsonwebtoken';
 import {NextRequest, NextResponse} from "next/server";
@@ -19,17 +20,16 @@ export const POST = async (
     const file = JSON.parse(await fs.promises.readFile("app/api/login/users.json", 'utf8'));
     const {users} = file;
 
-    console.log("file: " + file)
-
-    const user = users.find((u: { username: string; }) => u.username === username);
-    if (user) {
-        return Response.json({error: 'User already exists'}, {status: 401});
+    const foundUser = users.find((user: { username: string; }) => user.username === username);
+    if (foundUser) {
+        return Response.json({ error: 'User already exists' }, { status: 401 });
     }
+
+    const hashedPassword = createHash('sha256').update(password).digest('hex')
 
     const newUser: Creds = {
         username: username,
-        username: username,
-        password: password
+        password: hashedPassword
     }
 
     const appendedUsers = {

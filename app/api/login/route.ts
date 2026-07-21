@@ -1,6 +1,7 @@
 import fs from 'fs'
 import jwt from 'jsonwebtoken';
 import {NextRequest, NextResponse} from "next/server";
+import { createHash } from 'crypto';
 
 type Creds = {
     username: string,
@@ -20,12 +21,14 @@ export const POST = async (
     const file = await fs.promises.readFile("app/api/login/users.json", 'utf8');
     const {users} = JSON.parse(file);
 
-    const user = users.find((u: { username: string; }) => u.username != null && u.username === username);
-    if (!user) {
+    const foundUser = users.find((user: { username: string; }) => user.username != null && user.username === username);
+    if (!foundUser) {
         return Response.json({error: 'User does not exist'}, {status: 401});
     }
 
-    const isPasswordValid = (password == user.password);
+    const hashedPassword = createHash('sha256').update(password).digest('hex')
+
+    const isPasswordValid = (hashedPassword == foundUser.password);
     if (!isPasswordValid) {
         return Response.json({error: 'Incorrect password'}, {status: 401});
     }

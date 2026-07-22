@@ -1,0 +1,49 @@
+name: test.run
+
+on:
+  push:
+    branches:
+      - 'test*'
+      - 'test/*'
+
+jobs:
+  lint-run:
+    name: lint-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install | yarn install
+
+      - name: Run lint
+        run: npm run lint | yarn lint
+
+  test-run:
+    name: test-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install | yarn install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run tests
+        run: npm test | yarn test
+      
+        

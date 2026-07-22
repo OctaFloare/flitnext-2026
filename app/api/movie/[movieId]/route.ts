@@ -1,13 +1,20 @@
 import data from '../../../../mock.json'
 import fs from 'fs'
+import path from 'path'
 
 export const GET = async (
-    request: Request,
+    _request: Request,
     { params }: { params: Promise<{ movieId: string }> }
 ) => {
     const { movieId } = await params;
 
-    const movie = data.find(movieEntry => 
+    const getMockData = () => {
+    const filePath = path.join(process.cwd(), 'mock.json')
+    const fileContent = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContent)
+}
+
+    const movie = getMockData().find(movieEntry => 
         movieEntry.id === parseInt(movieId, 10)
     )
 
@@ -20,7 +27,7 @@ export const GET = async (
 }
 
 export const DELETE = async (
-     request: Request,
+     _request: Request,
     { params }: { params: Promise<{ movieId: string }> }
 ) => {
     const {movieId} = await params

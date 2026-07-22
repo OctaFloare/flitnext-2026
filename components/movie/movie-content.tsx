@@ -3,12 +3,15 @@
 import { useQuery } from "@tanstack/react-query"
 import * as moviesData from '../../mock.json'
 import { useDeleteMovie } from "./hooks/useDeleteMovie"
+import { useState, useRef } from "react"
 
 type Movie = typeof moviesData[0]
 
 export const MovieContent = ({ movieId } : {
     movieId: number,
 }) => {
+    const videoRef = useRef<HTMLVideoElement >(null)
+    const [isReady, setReady] = useState(false)
     const { data, error } = useQuery<Movie>({
         queryKey: ['movie', `${movieId}`],
         queryFn: async () => {
@@ -26,6 +29,18 @@ export const MovieContent = ({ movieId } : {
         mutate()
     }
 
+    const SkipIntro = () => {
+        const videoElement = videoRef.current
+        if(!isReady){
+            setReady(true);
+        }
+        if(videoElement == null) return
+
+        videoElement.currentTime = videoElement.duration;
+        setReady(false)
+
+    }
+
     return <div>
         <div>
       <h1 className="font-bold font-sans text-amber-400 text-4xl mb-10 mt-6">
@@ -36,11 +51,12 @@ export const MovieContent = ({ movieId } : {
       </div>
       <div className="grid grid-cols-3 gap-5">
           {data && <>`${data.title}`
-          <video width="320" height="240" controls>
+          <video ref={videoRef} width="320" height="240" controls >
             <source src={`${data.sourceUrl}`}></source>
             Your browser does not support the video tag.
           </video>
           </>}
+          <button onClick={SkipIntro}>Skip Intro</button>
       </div>
   </div>
 }

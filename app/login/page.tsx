@@ -6,7 +6,7 @@ import { useMutation } from "@tanstack/react-query"
 
 const Login = () => {
     const router = useRouter()
-    const [login, setLogin] = useState("")
+    const [username, setLogin] = useState("")
     const [password, setPassword] = useState("")
 
     const { mutate, error, isPending } = useMutation<{ error?: string }, Error, void>({
@@ -16,7 +16,7 @@ const Login = () => {
             const result = await fetch('/api/login', {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ login, password })
+                body: JSON.stringify({ username, password })
             })
 
             const data = await result.json()
@@ -40,7 +40,7 @@ const Login = () => {
             <input
                 className="border-2 border-amber-300 p-2"
                 placeholder="Login"
-                value={login}
+                value={username}
                 onChange={(e) => setLogin(e.target.value)}
             />
             <input

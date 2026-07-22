@@ -91,7 +91,7 @@
     "release_year": 1999,
     "sourceUrl": "https://samplelib.com/mp4/sample-5s.mp4",
     "imgUrl": "https://picsum.photos/seed/seriousbiopic/400/600",
-    "deleted": "false"
+    "deleted": false
   },
   {
     "id": 9,

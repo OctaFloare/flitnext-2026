@@ -1,4 +1,4 @@
-import * as data from '../../../../mock.json'
+import data from '../../../../mock.json'
 import fs from 'fs'
 
 export const GET = async (

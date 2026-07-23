@@ -35,7 +35,7 @@ export const MovieContent = ({ movieId } : {
       {deleteData && <div>{deleteData.message}</div>}
       </div>
       <div className="grid grid-cols-3 gap-5">
-          {data && <>`${data.title}`
+          {data && <>{data.title}
           <video width="320" height="240" controls>
             <source src={`${data.sourceUrl}`}></source>
             Your browser does not support the video tag.

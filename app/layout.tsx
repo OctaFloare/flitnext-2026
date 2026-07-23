@@ -18,6 +18,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Flitnext",
   description: "Video streaming app for summer practice",
+  applicationName: "Flitnext",
+  generator: "Next.js",
+  keywords: ["movies", "streaming", "film", "cinema"],
+  openGraph: {
+      type: "website",
+      url: "https://flitnext-2026.vercel.app/",
+      title: "flitnext",
+      description: "Movies website",
+      siteName: "Flitnext",
+      images: [{ url: "https://picsum.photos/seed/bestestmovie/400/600" }]
+    }
 };
 
 export default function RootLayout({

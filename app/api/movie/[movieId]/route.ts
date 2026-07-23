@@ -14,7 +14,7 @@ export const GET = async (
     return JSON.parse(fileContent)
 }
 
-    const movie = getMockData().find(movieEntry => 
+    const movie = getMockData().find((movieEntry: typeof data[0]) => 
         movieEntry.id === parseInt(movieId, 10)
     )
 

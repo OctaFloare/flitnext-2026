@@ -28,7 +28,15 @@ export const metadata: Metadata = {
       description: "Movies website",
       siteName: "Flitnext",
       images: [{ url: "https://picsum.photos/seed/bestestmovie/400/600" }]
+    },
+  robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
     }
+  }
 };
 
 export default function RootLayout({

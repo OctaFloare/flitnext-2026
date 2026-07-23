@@ -44,7 +44,7 @@ export const MoviesContent = () => {
         >
             {data && data.map((movie) => (!movie.deleted &&
                 <SwiperSlide key={movie.id} className="">
-                    <div className="w-63">
+                    <div className="w-63" data-testid="movie-card">
                         <p className="text-lg m-2">{movie.title}</p><p
                         className="text-gray-300 font-bold">({movie.release_year})</p>
 

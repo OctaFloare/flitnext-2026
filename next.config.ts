@@ -1,16 +1,11 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
-module.exports = {
+const nextConfig: NextConfig = {
+  reactCompiler: true,
   images: {
     remotePatterns: [new URL("https://picsum.photos/seed/**")]
   }
-}
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
-  output: "export"
 };
 
 export default withSentryConfig(nextConfig, {
